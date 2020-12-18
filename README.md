@@ -122,6 +122,14 @@ ta_l
 ta_c
 ta_r
 ```
+颜色  
+c -> color  
+333 666 999  
+```css
+c_3
+c_6
+c_9
+```
 ### height
 h -> height  
 0 ~ 100px   
