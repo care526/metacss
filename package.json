@@ -1,7 +1,7 @@
 {
   "name": "@carelj/metacss",
   "version": "0.0.2",
-  "description": "meta css",
+  "description": "原子类的css库",
   "main": "index.js",
   "bin": {
     "metacss": "bin/care.js"
@@ -12,16 +12,18 @@
     "test": "npx node-sass ./metas/expand.scss -o ./test"
   },
   "keywords": [
+    "meta",
+    "scss",
     "css"
   ],
-  "author": "care",
+  "author": "care526",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/care526/care-metacss.git"
+    "url": "git+https://github.com/care526/metacss.git"
   },
   "bugs": {
-    "url": "https://github.com/care526/care-metacss/issues"
+    "url": "https://github.com/care526/metacss/issues"
   },
   "devDependencies": {
     "node-sass": "^4.14.1"
