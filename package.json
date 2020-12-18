@@ -1,11 +1,29 @@
 {
-  "name": "@carelj/metacss",
-  "version": "0.0.1",
-  "description": "",
+  "name": "care-metacss",
+  "version": "0.0.5",
+  "description": "meta css",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "care-metacss": "bin/care.js"
   },
-  "author": "",
-  "license": "ISC"
+  "scripts": {
+    "dev": "npx node-sass ./metas/index.scss -w metas -o dev",
+    "build": "npx node-sass ./metas/index.scss --output-style compressed -o dist",
+    "test": "node-sass ./components/button.scss -o ./components"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "care",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/care526/care-metacss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/care526/care-metacss/issues"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
 }

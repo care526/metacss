@@ -1,0 +1,14 @@
+.cs {
+    &_p {
+        cursor: pointer;
+    }
+    &_na {
+        cursor: not-allowed;
+    }
+}
+
+@for $num from 0 through 10 {
+	.zi_#{$num} {
+        z-index: #{$num};
+    }
+}

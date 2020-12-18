@@ -1,0 +1,5 @@
+@for $num from 0 through 100 {
+	.h_#{$num} {
+        height: #{$num}px;
+    }
+}

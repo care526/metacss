@@ -1,0 +1,22 @@
+.pt {
+    &_r {
+        position: relative;
+    }
+    &_a {
+        position: absolute;
+    }
+    &_f {
+        position: fixed;
+    }
+    &_s {
+        position: sticky;
+    }
+}
+
+@for $num from 0 through 100 {
+    @each $key, $value in $abridge {
+        .#{$key}_#{$num} {
+            #{$value}: #{$num}px;
+        }
+    }
+}

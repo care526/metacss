@@ -1,0 +1,43 @@
+// 字体大小
+@for $num from 12 through 60 {
+	.fs_#{$num} {
+        font-size: #{$num}px;
+    }
+}
+@each $num in 70, 80, 90, 100, 110, 120 {
+    .fs_#{$num} {
+        font-size: #{$num}px;
+    }
+}
+
+// 行高
+// 单位 px
+@for $num from 12 through 100 {
+	.lh_#{$num} {
+        line-height: #{$num}px;
+    }
+}
+
+// 字重
+.fw {
+    font-weight: bold;
+}
+.fwer {
+    font-weight: bolder;
+}
+@each $num in 100, 200, 300, 400, 500, 600, 700, 800, 900 {
+    .fw_#{$num} {
+        font-weight: #{$num};
+    }
+}
+
+// 对齐
+.ta_l {
+    text-align: left;
+}
+.ta_c {
+    text-align: center;
+}
+.ta_r {
+    text-align: right;
+}
