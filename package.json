@@ -1,10 +1,10 @@
 {
-  "name": "care-metacss",
+  "name": "@carelj/metacss",
   "version": "0.0.2",
   "description": "meta css",
   "main": "index.js",
   "bin": {
-    "care-metacss": "bin/care.js"
+    "metacss": "bin/care.js"
   },
   "scripts": {
     "dev": "npx node-sass ./metas/index.scss -w metas -o dev",
