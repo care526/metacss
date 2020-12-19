@@ -1,21 +1,34 @@
 # meta-css文档
 
+> 平常在写项目的页面的时候，需要定义大量的css class写样式
+> 这个库将一些基础的css样式原子化，通过css class组合的方式达到效果
+
+## 使用
+- 原子类css文件
+  node_modules/@carelj/metacss/dist/index.min.css  
+- 扩展文件
+  node_modules/@carelj/metacss/dist/expand.scss
+
 ## 项目结构
 ```js
-metas  
-├── modules  
-│   ├── box.scss  
-│   ├── flex.scss  
-│   ├── float.scss  
-│   ├── font.scss  
-│   ├── height.scss  
-│   ├── margin.scss  
-│   ├── other.scss  
-│   ├── padding.scss  
-│   ├── position.scss  
-│   └── width.scss  
-├── vars.scss  
-└── index.scss  
+├── bin
+├── dist
+│   ├── expand.scss 
+    └── index.css 
+└── metas
+    ├── modules  
+    │   ├── box.scss  
+    │   ├── flex.scss  
+    │   ├── float.scss  
+    │   ├── font.scss  
+    │   ├── height.scss  
+    │   ├── margin.scss  
+    │   ├── other.scss  
+    │   ├── padding.scss  
+    │   ├── position.scss  
+    │   └── width.scss  
+    ├── vars.scss  
+    └── index.scss  
 ```
 
 ## 整体的设计规范
@@ -211,3 +224,41 @@ w -> width
 ```css
 w_45
 ```
+
+## 扩展
+> 扩展的目的
+> 如果将每个数值的原子类都列出来
+> 库的大小就爆炸了
+> 这里支持你用一些库没有提供对应数值的原子类
+
+sass mixin  
+```js
+w_x(110)
+h_x(200)
+fs_x(56)
+lh_x(45)
+mg_x(800)
+mg-h_x(101)
+mg-v_x(280)
+mg-t_x(157)
+mg-b_x(137)
+mg-l_x(489)
+mg-r_x(245)
+pd_x(123)
+pd-h_x(432)
+pd-v_x(569)
+pd-t_x(970)
+pd-b_x(156)
+pd-l_x(139)
+pd-r_x(179)
+t_x(365)
+b_x(264)
+l_x(178)
+r_x(641)
+```
+x：代表参数，格式同已经定义的原子类
+```scss
+// 具体使用
+@include fs_x(89)
+```
+less文件的扩展后续会补充
