@@ -14,7 +14,7 @@
 ├── bin
 ├── dist
 │   ├── expand.scss 
-    └── index.css 
+    └── index.min.css 
 └── metas
     ├── modules  
     │   ├── box.scss  
