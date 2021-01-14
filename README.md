@@ -14,7 +14,7 @@
 ├── bin
 ├── dist
 │   ├── expand.scss 
-    └── index.min.css 
+│   └── index.min.css 
 └── metas
     ├── modules  
     │   ├── box.scss  
@@ -56,7 +56,7 @@ mg-t_30      margin-top: 30px;
 
 ||||||
 | :-: | :-: | :-: | :-: | :-: |
-| start | center | end | space-between | space-around |
+| start | center | flex-end | space-between | space-around |
 | s | c | e | sb | sa |  
 ****
 
@@ -182,6 +182,13 @@ zi -> z-index
 0 ~ 10
 ```css
 zi_4
+```
+
+圆角
+br -> border-radius
+0 ~ 20 偶数
+```css
+br_4
 ```
 
 ### padding

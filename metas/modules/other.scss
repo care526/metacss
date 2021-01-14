@@ -1,14 +1,20 @@
 .cs {
-    &_p {
-        cursor: pointer;
-    }
-    &_na {
-        cursor: not-allowed;
-    }
+  &_p {
+    cursor: pointer;
+  }
+  &_na {
+    cursor: not-allowed;
+  }
 }
 
 @for $num from 0 through 10 {
-	.zi_#{$num} {
-        z-index: #{$num};
-    }
+  .zi_#{$num} {
+    z-index: #{$num};
+  }
+}
+
+@for $num from 0 through 10 {
+  .br_#{$num * 2} {
+    border-radius: #{$num * 2}px;
+  }
 }

@@ -1,95 +1,95 @@
 $map: (
-    s: start,
-    c: center,
-    e: end,
-    sb: space-between,
-    sa: space-around,
+  s: start,
+  c: center,
+  e: flex-end,
+  sb: space-between,
+  sa: space-around,
 );
 
 .flex1 {
-    flex: 1;
+  flex: 1;
 }
 // 行
 .row {
-    display: flex;
-    &-v {
-        @each $key, $value in $map {
-            &_#{$key} {
-                display: flex;
-                align-items: $value;
-            }
-        }
+  display: flex;
+  &-v {
+    @each $key, $value in $map {
+      &_#{$key} {
+        display: flex;
+        align-items: $value;
+      }
     }
-    &-h {
-        @each $key, $value in $map {
-            &_#{$key} {
-                display: flex;
-                justify-content: $value;
-            }
-        }
+  }
+  &-h {
+    @each $key, $value in $map {
+      &_#{$key} {
+        display: flex;
+        justify-content: $value;
+      }
     }
-    @each $aKey, $aValue in $map {
-        &_#{$aKey} {
-            @each $jKey, $jValue in $map {
-                &_#{$jKey} {
-                    display: flex;
-                    align-items: $aValue;
-                    justify-content: $jValue;
-                }
-            }
+  }
+  @each $aKey, $aValue in $map {
+    &_#{$aKey} {
+      @each $jKey, $jValue in $map {
+        &_#{$jKey} {
+          display: flex;
+          align-items: $aValue;
+          justify-content: $jValue;
         }
+      }
     }
-    // 换行
-    &-wp {
-        &_w {
-            flex-wrap: wrap;
-        }
-        &_wr {
-            flex-wrap: wrap-reverse;
-        }
+  }
+  // 换行
+  &-wp {
+    &_w {
+      flex-wrap: wrap;
     }
+    &_wr {
+      flex-wrap: wrap-reverse;
+    }
+  }
 }
 // 列
 .column {
-    display: flex;
-    flex-direction: column;
-    &-v {
-        @each $key, $value in $map {
-            &_#{$key} {
-                display: flex;
-                flex-direction: column;
-                align-items: $value;
-            }
-        }
+  display: flex;
+  flex-direction: column;
+  &-v {
+    @each $key, $value in $map {
+      &_#{$key} {
+        display: flex;
+        flex-direction: column;
+        align-items: $value;
+      }
     }
-    &-h {
-        @each $key, $value in $map {
-            &_#{$key} {
-                display: flex;
-                flex-direction: column;
-                justify-content: $value;
-            }
-        }
+  }
+  &-h {
+    @each $key, $value in $map {
+      &_#{$key} {
+        display: flex;
+        flex-direction: column;
+        justify-content: $value;
+      }
     }
-    @each $aKey, $aValue in $map {
-        &_#{$aKey} {
-            @each $jKey, $jValue in $map {
-                &_#{$jKey} {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: $aValue;
-                    justify-content: $jValue;
-                }
-            }
+  }
+  @each $aKey, $aValue in $map {
+    &_#{$aKey} {
+      @each $jKey, $jValue in $map {
+        &_#{$jKey} {
+          display: flex;
+          flex-direction: column;
+          align-items: $aValue;
+          justify-content: $jValue;
         }
+      }
     }
-    // 换行
-    &-wp {
-        &_w {
-            flex-wrap: wrap;
-        }
-        &_wr {
-            flex-wrap: wrap-reverse;
-        }
+  }
+  // 换行
+  &-wp {
+    &_w {
+      flex-wrap: wrap;
     }
+    &_wr {
+      flex-wrap: wrap-reverse;
+    }
+  }
 }
