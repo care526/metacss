@@ -1,26 +1,26 @@
 .pd {
-    @for $num from 0 through 100 {
-        @each $key, $value in $abridge {
-            &-#{$key}_#{$num} {
-                padding-#{$value}: #{$num}px;
-            }
-        }
-        &_#{$num} {
-            padding: #{$num}px;
-        }
-        &-v_#{$num} {
-            padding-top: #{$num}px;
-            padding-bottom: #{$num}px;
-        }
-        &-h_#{$num} {
-            padding-left: #{$num}px;
-            padding-right: #{$num}px;
-        }
+  @for $num from 0 through 100 {
+    @each $key, $value in $directionMap {
+      &-#{$key}_#{$num} {
+        padding-#{$value}: #{$num}px;
+      }
     }
-    &-v_a {
-        padding: auto 0;
+    &_#{$num} {
+      padding: #{$num}px;
     }
-    &-h_a {
-        padding: 0 auto;
+    &-v_#{$num} {
+      padding-top: #{$num}px;
+      padding-bottom: #{$num}px;
     }
+    &-h_#{$num} {
+      padding-left: #{$num}px;
+      padding-right: #{$num}px;
+    }
+  }
+  &-v_a {
+    padding: auto 0;
+  }
+  &-h_a {
+    padding: 0 auto;
+  }
 }

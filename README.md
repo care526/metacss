@@ -11,13 +11,14 @@
 
 ## 项目结构
 ```js
-├── bin
+├── dome
 ├── dist
 │   ├── expand.scss 
 │   └── index.min.css 
 └── metas
     ├── modules  
     │   ├── box.scss  
+    │   ├── color.scss  
     │   ├── flex.scss  
     │   ├── float.scss  
     │   ├── font.scss  
@@ -56,7 +57,7 @@ mg-t_30      margin-top: 30px;
 
 ||||||
 | :-: | :-: | :-: | :-: | :-: |
-| start | center | flex-end | space-between | space-around |
+| flex-start | center | flex-end | space-between | space-around |
 | s | c | e | sb | sa |  
 ****
 
@@ -79,6 +80,13 @@ display -> dp
 dp_b
 dp_i
 dp_ib
+```
+### color
+c -> color
+```css
+c_3
+c_6
+c_9
 ```
 ### flex
 ```css
@@ -182,6 +190,15 @@ zi -> z-index
 0 ~ 10
 ```css
 zi_4
+```
+
+透明度
+op -> opacity
+0.1 ~ 1
+数值放大了10倍
+```css
+op_1
+op_10
 ```
 
 圆角

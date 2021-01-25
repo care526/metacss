@@ -1,26 +1,26 @@
 .mg {
-    @for $num from 0 through 100 {
-        @each $key, $value in $abridge {
-            &-#{$key}_#{$num} {
-                margin-#{$value}: #{$num}px;
-            }
-        }
-        &_#{$num} {
-            margin: #{$num}px;
-        }
-        &-v_#{$num} {
-            margin-top: #{$num}px;
-            margin-bottom: #{$num}px;
-        }
-        &-h_#{$num} {
-            margin-left: #{$num}px;
-            margin-right: #{$num}px;
-        }
+  @for $num from 0 through 100 {
+    @each $key, $value in $directionMap {
+      &-#{$key}_#{$num} {
+        margin-#{$value}: #{$num}px;
+      }
     }
-    &-v_a {
-        margin: auto 0;
+    &_#{$num} {
+      margin: #{$num}px;
     }
-    &-h_a {
-        margin: 0 auto;
+    &-v_#{$num} {
+      margin-top: #{$num}px;
+      margin-bottom: #{$num}px;
     }
+    &-h_#{$num} {
+      margin-left: #{$num}px;
+      margin-right: #{$num}px;
+    }
+  }
+  &-v_a {
+    margin: auto 0;
+  }
+  &-h_a {
+    margin: 0 auto;
+  }
 }

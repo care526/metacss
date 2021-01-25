@@ -1,19 +1,12 @@
-$map: (
-  s: start,
-  c: center,
-  e: flex-end,
-  sb: space-between,
-  sa: space-around,
-);
-
 .flex1 {
   flex: 1;
 }
+
 // 行
 .row {
   display: flex;
   &-v {
-    @each $key, $value in $map {
+    @each $key, $value in $arrangement {
       &_#{$key} {
         display: flex;
         align-items: $value;
@@ -21,16 +14,16 @@ $map: (
     }
   }
   &-h {
-    @each $key, $value in $map {
+    @each $key, $value in $arrangement {
       &_#{$key} {
         display: flex;
         justify-content: $value;
       }
     }
   }
-  @each $aKey, $aValue in $map {
+  @each $aKey, $aValue in $arrangement {
     &_#{$aKey} {
-      @each $jKey, $jValue in $map {
+      @each $jKey, $jValue in $arrangement {
         &_#{$jKey} {
           display: flex;
           align-items: $aValue;
@@ -49,12 +42,13 @@ $map: (
     }
   }
 }
+
 // 列
 .column {
   display: flex;
   flex-direction: column;
   &-v {
-    @each $key, $value in $map {
+    @each $key, $value in $arrangement {
       &_#{$key} {
         display: flex;
         flex-direction: column;
@@ -63,7 +57,7 @@ $map: (
     }
   }
   &-h {
-    @each $key, $value in $map {
+    @each $key, $value in $arrangement {
       &_#{$key} {
         display: flex;
         flex-direction: column;
@@ -71,9 +65,9 @@ $map: (
       }
     }
   }
-  @each $aKey, $aValue in $map {
+  @each $aKey, $aValue in $arrangement {
     &_#{$aKey} {
-      @each $jKey, $jValue in $map {
+      @each $jKey, $jValue in $arrangement {
         &_#{$jKey} {
           display: flex;
           flex-direction: column;

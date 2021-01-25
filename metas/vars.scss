@@ -1,6 +1,16 @@
-$abridge: (
-    "t": "top",
-    "b": "bottom",
-    "l": "left",
-    "r": "right",
+// 方向
+$directionMap: (
+  "t": "top",
+  "b": "bottom",
+  "l": "left",
+  "r": "right",
+);
+
+// 排列
+$arrangement: (
+  s: flex-start,
+  c: center,
+  e: flex-end,
+  sb: space-between,
+  sa: space-around,
 );
