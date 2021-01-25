@@ -1,17 +1,19 @@
 {
   "name": "@carelj/metacss",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "原子类的css库",
   "main": "index.js",
   "scripts": {
     "dev": "npx node-sass ./metas/index.scss -w metas -o dev",
-    "build": "npx node-sass ./metas/index.scss --output-style compressed -o dist",
+    "build": "npx node-sass ./metas/index.scss --output-style compressed -o ./test",
     "comp": "npx node-sass ./metas/modules/other.scss -o ./test"
   },
   "keywords": [
     "meta",
     "scss",
-    "css"
+    "css",
+    "atomic",
+    "atom"
   ],
   "author": "care526",
   "license": "ISC",

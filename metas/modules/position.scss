@@ -14,9 +14,11 @@
 }
 
 @for $num from 0 through 100 {
-  @each $key, $value in $directionMap {
-    .#{$key}_#{$num} {
-      #{$value}: #{$num}px;
+  @if (($num % 2 == 0) or $notFilterOdd) {
+    @each $key, $value in $directionMap {
+      .#{$key}_#{$num} {
+        #{$value}: #{$num}px;
+      }
     }
   }
 }

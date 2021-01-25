@@ -1,20 +1,22 @@
 .mg {
   @for $num from 0 through 100 {
-    @each $key, $value in $directionMap {
-      &-#{$key}_#{$num} {
-        margin-#{$value}: #{$num}px;
+    @if (($num % 2 == 0) or $notFilterOdd) {
+      @each $key, $value in $directionMap {
+        &-#{$key}_#{$num} {
+          margin-#{$value}: #{$num}px;
+        }
       }
-    }
-    &_#{$num} {
-      margin: #{$num}px;
-    }
-    &-v_#{$num} {
-      margin-top: #{$num}px;
-      margin-bottom: #{$num}px;
-    }
-    &-h_#{$num} {
-      margin-left: #{$num}px;
-      margin-right: #{$num}px;
+      &_#{$num} {
+        margin: #{$num}px;
+      }
+      &-v_#{$num} {
+        margin-top: #{$num}px;
+        margin-bottom: #{$num}px;
+      }
+      &-h_#{$num} {
+        margin-left: #{$num}px;
+        margin-right: #{$num}px;
+      }
     }
   }
   &-v_a {

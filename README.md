@@ -4,9 +4,12 @@
 > 这个库将一些基础的css样式原子化，通过css class组合的方式达到效果
 
 ## 使用
-- 原子类css文件
-  node_modules/@carelj/metacss/dist/index.min.css  
-- 扩展文件
+- 原子类css文件  
+  node_modules/@carelj/metacss/dist/index.min.css (63kb)  
+  node_modules/@carelj/metacss/dist/index.half.min.css (35kb)  
+  half是去除了奇数值的精简版  
+  因为文件中相同字符很多，gzip后文件大小降低为原大小的1/6  
+- 扩展文件  
   node_modules/@carelj/metacss/dist/expand.scss
 
 ## 项目结构
@@ -14,6 +17,7 @@
 ├── dome
 ├── dist
 │   ├── expand.scss 
+│   ├── index.half.min.css
 │   └── index.min.css 
 └── metas
     ├── modules  
@@ -142,14 +146,6 @@ ta -> text-align
 ta_l
 ta_c
 ta_r
-```
-颜色  
-c -> color  
-333 666 999  
-```css
-c_3
-c_6
-c_9
 ```
 ### height
 h -> height  
@@ -286,3 +282,9 @@ x：代表参数，格式同已经定义的原子类
 @include fs_x(89)
 ```
 less文件的扩展后续会补充
+
+## scss变量
+```scss
+// 是否过滤奇数数值的原子类
+$notFilterOdd: true;
+```

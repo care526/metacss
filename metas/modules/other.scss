@@ -8,13 +8,15 @@
 }
 
 @for $num from 0 through 10 {
-  // 层级
-  .zi_#{$num} {
-    z-index: #{$num};
-  }
-  // 透明度
-  .op_#{$num} {
-    opacity: 0.1 * $num;
+  @if (($num % 2 == 0) or $notFilterOdd) {
+    // 层级
+    .zi_#{$num} {
+      z-index: #{$num};
+    }
+    // 透明度
+    .op_#{$num} {
+      opacity: 0.1 * $num;
+    }
   }
   // 圆角
   .br_#{$num * 2} {

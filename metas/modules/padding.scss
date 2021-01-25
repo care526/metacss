@@ -1,20 +1,22 @@
 .pd {
   @for $num from 0 through 100 {
-    @each $key, $value in $directionMap {
-      &-#{$key}_#{$num} {
-        padding-#{$value}: #{$num}px;
+    @if (($num % 2 == 0) or $notFilterOdd) {
+      @each $key, $value in $directionMap {
+        &-#{$key}_#{$num} {
+          padding-#{$value}: #{$num}px;
+        }
       }
-    }
-    &_#{$num} {
-      padding: #{$num}px;
-    }
-    &-v_#{$num} {
-      padding-top: #{$num}px;
-      padding-bottom: #{$num}px;
-    }
-    &-h_#{$num} {
-      padding-left: #{$num}px;
-      padding-right: #{$num}px;
+      &_#{$num} {
+        padding: #{$num}px;
+      }
+      &-v_#{$num} {
+        padding-top: #{$num}px;
+        padding-bottom: #{$num}px;
+      }
+      &-h_#{$num} {
+        padding-left: #{$num}px;
+        padding-right: #{$num}px;
+      }
     }
   }
   &-v_a {

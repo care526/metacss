@@ -1,5 +1,7 @@
 @for $num from 0 through 100 {
-	.w_#{$num} {
-        width: #{$num}px;
+  @if (($num % 2 == 0) or $notFilterOdd) {
+    .w_#{$num} {
+      width: #{$num}px;
     }
+  }
 }
