@@ -1,6 +1,6 @@
 {
   "name": "@carelj/metacss",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "description": "原子类的css库",
   "main": "index.js",
   "scripts": {
