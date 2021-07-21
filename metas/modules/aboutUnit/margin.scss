@@ -1,0 +1,30 @@
+@if ($isPackMargin) {
+  .mg {
+    @for $num from 0 through $baseMaxNum {
+      @if (($num % 2 == 0) or $notFilterOdd) {
+        @each $key, $value in $directionMap {
+          &-#{$key}_#{$num} {
+            margin-#{$value}: #{$num}#{$unit};
+          }
+        }
+        &_#{$num} {
+          margin: #{$num}#{$unit};
+        }
+        &-v_#{$num} {
+          margin-top: #{$num}#{$unit};
+          margin-bottom: #{$num}#{$unit};
+        }
+        &-h_#{$num} {
+          margin-left: #{$num}#{$unit};
+          margin-right: #{$num}#{$unit};
+        }
+      }
+    }
+    &-v_a {
+      margin: auto 0;
+    }
+    &-h_a {
+      margin: 0 auto;
+    }
+  }
+}

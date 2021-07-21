@@ -1,0 +1,9 @@
+@for $num from 0 through $baseMaxNum {
+  @if (($num % 2 == 0) or $notFilterOdd) {
+    @each $key, $value in $directionMap {
+      .#{$key}_#{$num} {
+        #{$value}: #{$num}#{$unit};
+      }
+    }
+  }
+}

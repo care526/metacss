@@ -1,0 +1,30 @@
+@if ($isPackPadding) {
+  .pd {
+    @for $num from 0 through $baseMaxNum {
+      @if (($num % 2 == 0) or $notFilterOdd) {
+        @each $key, $value in $directionMap {
+          &-#{$key}_#{$num} {
+            padding-#{$value}: #{$num}#{$unit};
+          }
+        }
+        &_#{$num} {
+          padding: #{$num}#{$unit};
+        }
+        &-v_#{$num} {
+          padding-top: #{$num}#{$unit};
+          padding-bottom: #{$num}#{$unit};
+        }
+        &-h_#{$num} {
+          padding-left: #{$num}#{$unit};
+          padding-right: #{$num}#{$unit};
+        }
+      }
+    }
+    &-v_a {
+      padding: auto 0;
+    }
+    &-h_a {
+      padding: 0 auto;
+    }
+  }
+}

@@ -1,7 +1,7 @@
-@for $num from 0 through 100 {
+@for $num from 0 through $fontMaxNum {
   @if (($num % 2 == 0) or $notFilterOdd) {
     .w_#{$num} {
-      width: #{$num}px;
+      width: #{$num}#{$unit};
     }
   }
 }
