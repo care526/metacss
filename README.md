@@ -8,10 +8,7 @@
   node_modules/@carelj/metacss/dist/index.min.css (61kb)  
   node_modules/@carelj/metacss/dist/index.half.min.css (34kb)  
   half是去除了奇数值的精简版  
-  因为文件中相同字符很多，gzip后文件大小降低为原大小的1/6  
-- rpx版本  
-  node_modules/@carelj/metacss/dist/index.rpx.min.css (65kb)  
-  node_modules/@carelj/metacss/dist/index.rpx.half.min.css (36kb)  
+  因为文件中相同字符很多，gzip后文件大小降低为原大小的1/6   
 - 扩展文件  
   node_modules/@carelj/metacss/dist/expand.scss
 
