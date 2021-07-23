@@ -4,9 +4,9 @@
 > 这个库将一些基础的css样式原子化，通过css class组合的方式达到效果
 
 ## 使用
-- 原子类css文件  
-  node_modules/@carelj/metacss/dist/index.min.css (63kb)  
-  node_modules/@carelj/metacss/dist/index.half.min.css (35kb)  
+- 原子类css文件(px)  
+  node_modules/@carelj/metacss/dist/index.min.css (61kb)  
+  node_modules/@carelj/metacss/dist/index.half.min.css (34kb)  
   half是去除了奇数值的精简版  
   因为文件中相同字符很多，gzip后文件大小降低为原大小的1/6  
 - 扩展文件  
@@ -14,7 +14,6 @@
 
 ## 项目结构
 ```js
-├── dome
 ├── dist
 │   ├── expand.scss 
 │   ├── index.half.min.css
@@ -25,15 +24,39 @@
     │   ├── color.scss  
     │   ├── flex.scss  
     │   ├── float.scss  
-    │   ├── font.scss  
-    │   ├── height.scss  
-    │   ├── margin.scss  
     │   ├── other.scss  
-    │   ├── padding.scss  
-    │   ├── position.scss  
-    │   └── width.scss  
+    │   ├── position.scss
+    │   └── aboutUnit
+    │       ├── font.scss  
+    │       ├── height.scss  
+    │       ├── margin.scss  
+    │       ├── other.scss  
+    │       ├── padding.scss  
+    │       ├── positionValue.scss  
+    │       └── width.scss  
     ├── vars.scss  
     └── index.scss  
+```
+
+## scss变量
+```scss
+// 单位
+$unit: 'px';
+
+$baseMaxNum: 100; // 基础数值
+$borderMaxNum: 10; // 圆角数值
+$fontMaxNum: 60; // 字体数值
+
+// 不过滤奇数数值的原子类
+$notFilterOdd: true;
+
+// 打包部分模块
+$isPackPadding: true;
+$isPackMargin: true;
+$isPackWidth: true;
+$isPackHeight: true;
+$isPackFont: true;
+$isPackPositionValue: true;
 ```
 
 ## 整体的设计规范
@@ -88,6 +111,7 @@ dp_ib
 ### color
 c -> color
 ```css
+c_0
 c_3
 c_6
 c_9
@@ -282,9 +306,3 @@ x：代表参数，格式同已经定义的原子类
 @include fs_x(89)
 ```
 less文件的扩展后续会补充
-
-## scss变量
-```scss
-// 是否过滤奇数数值的原子类
-$notFilterOdd: true;
-```
