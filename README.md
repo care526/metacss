@@ -119,6 +119,8 @@ c_9
 ### flex
 ```css
 flex1
+flex2
+flex3
 ```
 行 row  
 ```css
@@ -170,6 +172,12 @@ ta -> text-align
 ta_l
 ta_c
 ta_r
+```
+换行
+wb -> word-break
+```css
+wb_ba
+wb_ka
 ```
 ### height
 h -> height  
