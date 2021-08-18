@@ -5,10 +5,15 @@
 
 ## 使用
 - 原子类css文件(px)  
-  node_modules/@carelj/metacss/dist/index.min.css (61kb)  
+  node_modules/@carelj/metacss/dist/index.min.css (60kb)  
   node_modules/@carelj/metacss/dist/index.half.min.css (34kb)  
   half是去除了奇数值的精简版  
   因为文件中相同字符很多，gzip后文件大小降低为原大小的1/6   
+- 源代码scss文件引用  
+  ```scss
+  $unit: "rpx"; // 变量的重写
+  @import '@carelj/metacss/metas/index.scss';
+  ```
 - 扩展文件  
   node_modules/@carelj/metacss/dist/expand.scss
 

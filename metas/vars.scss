@@ -1,9 +1,9 @@
 // 方向
 $directionMap: (
-  't': 'top',
-  'b': 'bottom',
-  'l': 'left',
-  'r': 'right',
+  "t": "top",
+  "b": "bottom",
+  "l": "left",
+  "r": "right",
 );
 
 // 排列
@@ -16,19 +16,19 @@ $arrangement: (
 );
 
 // 单位
-$unit: 'px';
+$unit: "px" !default;
 
-$baseMaxNum: 100; // 基础数值
-$borderMaxNum: 10; // 圆角数值
-$fontMaxNum: 60; // 字体数值
+$baseMaxNum: 100 !default; // 基础数值
+$borderMaxNum: 10 !default; // 圆角数值
+$fontMaxNum: 60 !default; // 字体数值
 
 // 不过滤奇数数值的原子类
-$notFilterOdd: false;
+$notFilterOdd: false !default;
 
 // 打包部分模块
-$isPackPadding: true;
-$isPackMargin: true;
-$isPackWidth: true;
-$isPackHeight: true;
-$isPackFont: true;
-$isPackPositionValue: true;
+$isPackPadding: true !default;
+$isPackMargin: true !default;
+$isPackWidth: true !default;
+$isPackHeight: true !default;
+$isPackFont: true !default;
+$isPackPositionValue: true !default;
