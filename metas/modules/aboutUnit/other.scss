@@ -1,6 +1,6 @@
 @for $num from 0 through $borderMaxNum {
   // 圆角
   .br_#{$num * 2} {
-    border-radius: #{$num * 2}px;
+    border-radius: #{$num * 2}#{$unit};
   }
 }
