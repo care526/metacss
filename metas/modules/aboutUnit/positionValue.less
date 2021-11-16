@@ -1,0 +1,7 @@
+each(range(0, @baseMaxNum), .(@num) {
+  each(.directionMap(), {
+    .@{key}_@{num} {
+      @{value}: unit(@num, @unit);
+    }
+  });
+});

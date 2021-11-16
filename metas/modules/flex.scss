@@ -1,11 +1,7 @@
-.flex1 {
-  flex: 1;
-}
-.flex2 {
-  flex: 2;
-}
-.flex3 {
-  flex: 3;
+@each $value in 1, 2, 3, 4 {
+  .flex#{value} {
+    flex: #{value}
+  }
 }
 
 // 行

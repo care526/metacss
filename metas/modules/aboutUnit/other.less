@@ -1,0 +1,7 @@
+each(range(0, @borderMaxNum), {
+  // 圆角
+  @value2: @value * 2;
+  .br_@{value2} {
+    border-radius: unit(@value2, @unit);
+  }
+})

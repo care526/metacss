@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "npx node-sass ./metas/index.scss -w metas -o dev",
     "build": "npx node-sass ./metas/index.scss --output-style compressed -o ./test",
-    "comp": "npx node-sass ./metas/modules/aboutUnit/font.scss -o ./test"
+    "comp": "npx node-sass ./metas/modules/aboutUnit/font.scss -o ./test",
+    "comp:less": "npx lessc --clean-css=advanced ./metas/index.less ./test/test.css"
   },
   "keywords": [
     "meta",
@@ -26,5 +27,9 @@
   },
   "devDependencies": {
     "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "less": "^4.1.2",
+    "less-plugin-clean-css": "^1.5.1"
   }
 }

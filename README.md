@@ -21,32 +21,48 @@
 ```js
 ├── dist
 │   ├── expand.scss 
+│   ├── expand.less 
 │   ├── index.half.min.css
 │   └── index.min.css 
 └── metas
     ├── modules  
     │   ├── box.scss  
+    │   ├── box.less  
     │   ├── color.scss  
+    │   ├── color.less  
     │   ├── flex.scss  
+    │   ├── flex.less  
     │   ├── float.scss  
+    │   ├── float.less  
     │   ├── other.scss  
+    │   ├── other.less  
     │   ├── position.scss
+    │   ├── position.less
     │   └── aboutUnit
     │       ├── font.scss  
+    │       ├── font.less  
     │       ├── height.scss  
+    │       ├── height.less  
     │       ├── margin.scss  
+    │       ├── margin.less  
     │       ├── other.scss  
+    │       ├── other.less  
     │       ├── padding.scss  
+    │       ├── padding.less  
     │       ├── positionValue.scss  
+    │       ├── positionValue.less  
     │       └── width.scss  
+    │       └── width.less  
     ├── vars.scss  
+    ├── vars.less  
     └── index.scss  
+    └── index.less  
 ```
 
 ## scss变量
 ```scss
 // 单位
-$unit: 'px';
+$unit: px;
 
 $baseMaxNum: 100; // 基础数值
 $borderMaxNum: 10; // 圆角数值
@@ -63,6 +79,14 @@ $isPackHeight: true;
 $isPackFont: true;
 $isPackPositionValue: true;
 ```
+
+## less变量
+// 单位
+@unit: px;
+
+@baseMaxNum: 100; // 基础数值
+@borderMaxNum: 10; // 圆角数值
+@fontMaxNum: 60; // 字体数值
 
 ## 整体的设计规范
 属性简写 - 描述 _ 值  
@@ -126,6 +150,7 @@ c_9
 flex1
 flex2
 flex3
+flex4
 ```
 行 row  
 ```css
@@ -318,4 +343,3 @@ x：代表参数，格式同已经定义的原子类
 // 具体使用
 @include fs_x(89)
 ```
-less文件的扩展后续会补充

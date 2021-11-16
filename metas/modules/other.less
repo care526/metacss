@@ -1,0 +1,19 @@
+.cs {
+  &_p {
+    cursor: pointer;
+  }
+  &_na {
+    cursor: not-allowed;
+  }
+}
+
+each(range(0, 10), {
+  // 层级
+  .zi_@{value} {
+    z-index: @value;
+  }
+  // 透明度
+  .op_@{value} {
+    opacity: 0.1 * @value;
+  }
+});

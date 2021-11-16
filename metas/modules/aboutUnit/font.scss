@@ -1,55 +1,58 @@
-// 字体大小
-@for $num from 12 through $fontMaxNum {
-  @if (($num % 2 == 0) or $notFilterOdd) {
+@if ($isPackFont) {
+  // 字体大小
+  @for $num from 12 through $fontMaxNum {
+    @if (($num % 2 == 0) or $notFilterOdd) {
+      .fs_#{$num} {
+        font-size: #{$num}#{$unit};
+      }
+    }
+  }
+  @each $num in 70, 80, 90, 100, 110, 120 {
     .fs_#{$num} {
       font-size: #{$num}#{$unit};
     }
   }
-}
-@each $num in 70, 80, 90, 100, 110, 120 {
-  .fs_#{$num} {
-    font-size: #{$num}#{$unit};
-  }
-}
-
-// 行高
-// 单位 px
-@for $num from 12 through $fontMaxNum {
-  @if (($num % 2 == 0) or $notFilterOdd) {
-    .lh_#{$num} {
-      line-height: #{$num}#{$unit};
+  
+  // 行高
+  // 单位 px
+  @for $num from 12 through $fontMaxNum {
+    @if (($num % 2 == 0) or $notFilterOdd) {
+      .lh_#{$num} {
+        line-height: #{$num}#{$unit};
+      }
     }
   }
-}
-
-// 字重
-.fw {
-  font-weight: bold;
-}
-.fwer {
-  font-weight: bolder;
-}
-@each $num in 100, 200, 300, 400, 500, 600, 700, 800, 900 {
-  .fw_#{$num} {
-    font-weight: #{$num};
+  
+  // 字重
+  .fw {
+    font-weight: bold;
+  }
+  .fwer {
+    font-weight: bolder;
+  }
+  @each $num in 100, 200, 300, 400, 500, 600, 700, 800, 900 {
+    .fw_#{$num} {
+      font-weight: #{$num};
+    }
+  }
+  
+  // 对齐
+  .ta_l {
+    text-align: left;
+  }
+  .ta_c {
+    text-align: center;
+  }
+  .ta_r {
+    text-align: right;
+  }
+  
+  // 换行
+  .wb_ba {
+    word-break: break-all;
+  }
+  .wb_ka {
+    word-break: keep-all;
   }
 }
 
-// 对齐
-.ta_l {
-  text-align: left;
-}
-.ta_c {
-  text-align: center;
-}
-.ta_r {
-  text-align: right;
-}
-
-// 换行
-.wb_ba {
-  word-break: break-all;
-}
-.wb_ka {
-  word-break: keep-all;
-}

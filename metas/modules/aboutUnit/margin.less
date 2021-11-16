@@ -1,0 +1,26 @@
+.mg {
+  each(range(0, @baseMaxNum), .(@num) {
+    each(.directionMap(), {
+      &-@{key}_@{num} {
+        margin-@{value}: unit(@num, @unit);
+      }
+    })
+    &_@{num} {
+      margin: unit(@num, @unit);
+    }
+    &-v_@{num} {
+      margin-top: unit(@num, @unit);
+      margin-bottom: unit(@num, @unit);
+    }
+    &-h_@{num} {
+      margin-left: unit(@num, @unit);
+      margin-right: unit(@num, @unit);
+    }
+  })
+  &-v_a {
+    margin: auto 0;
+  }
+  &-h_a {
+    margin: 0 auto;
+  }
+}

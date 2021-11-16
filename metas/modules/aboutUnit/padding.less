@@ -1,0 +1,26 @@
+.pd {
+  each(range(0, @baseMaxNum), .(@num) {
+    each(.directionMap(), {
+      &-@{key}_@{num} {
+        padding-@{value}: unit(@num, @unit);
+      }
+    })
+    &_@{num} {
+      padding: unit(@num, @unit);
+    }
+    &-v_@{num} {
+      padding-top: unit(@num, @unit);
+      padding-bottom: unit(@num, @unit);
+    }
+    &-h_@{num} {
+      padding-left: unit(@num, @unit);
+      padding-right: unit(@num, @unit);
+    }
+  })
+  &-v_a {
+    padding: auto 0;
+  }
+  &-h_a {
+    padding: 0 auto;
+  }
+}

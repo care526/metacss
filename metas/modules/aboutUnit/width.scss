@@ -1,7 +1,9 @@
-@for $num from 0 through $fontMaxNum {
-  @if (($num % 2 == 0) or $notFilterOdd) {
-    .w_#{$num} {
-      width: #{$num}#{$unit};
+@if ($isPackWidth) {
+  @for $num from 0 through $fontMaxNum {
+    @if (($num % 2 == 0) or $notFilterOdd) {
+      .w_#{$num} {
+        width: #{$num}#{$unit};
+      }
     }
   }
 }

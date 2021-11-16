@@ -1,0 +1,53 @@
+// 字体大小
+each(range(12, @fontMaxNum), {
+  .fs_@{value} {
+    font-size: unit(@value, @unit);
+  }
+})
+@bigfont: 70, 80, 90, 100, 110, 120;
+each(@bigfont, {
+  .fs_@{value} {
+    font-size: @value@unit;
+  }
+});
+
+// 行高
+// 单位 px
+each(range(12, @fontMaxNum), {
+  .lh_@{value} {
+    line-height: unit(@value, @unit);
+  }
+})
+
+// 字重
+.fw {
+  font-weight: bold;
+}
+.fwer {
+  font-weight: bolder;
+}
+@fwnum: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+each(@fwnum, {
+  .fw_@{value} {
+    font-weight: @value;
+  }
+});
+
+// 对齐
+.ta_l {
+  text-align: left;
+}
+.ta_c {
+  text-align: center;
+}
+.ta_r {
+  text-align: right;
+}
+
+// 换行
+.wb_ba {
+  word-break: break-all;
+}
+.wb_ka {
+  word-break: keep-all;
+}

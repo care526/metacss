@@ -1,7 +1,9 @@
-@for $num from 0 through $fontMaxNum {
-  @if (($num % 2 == 0) or $notFilterOdd) {
-    .h_#{$num} {
-      height: #{$num}#{$unit};
+@if ($isPackWidth) {
+  @for $num from 0 through $baseMaxNum {
+    @if (($num % 2 == 0) or $notFilterOdd) {
+      .h_#{$num} {
+        height: #{$num}#{$unit};
+      }
     }
   }
 }

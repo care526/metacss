@@ -1,0 +1,92 @@
+each(range(1, 4), {
+  .flex@{value} {
+    flex: @value;
+  }
+});
+
+// 行
+.row {
+  display: flex;
+  &-v {
+    each(.arrangement(), {
+      &_@{key} {
+        display: flex;
+        align-items: @value;
+      }
+    });
+  }
+  &-h {
+    each(.arrangement(), {
+      &_@{key} {
+        display: flex;
+        justify-content: @value;
+      }
+    });
+  }
+  each(.arrangement(), .(@avalue, @akey) {
+    &_@{akey} {
+      each(.arrangement(), .(@jvalue, @jkey) {
+        &_@{jkey} {
+          display: flex;
+          align-items: @avalue;
+          justify-content: @jvalue;
+        }
+      })
+    };
+  });
+
+  // 换行
+  &-wp {
+    &_w {
+      flex-wrap: wrap;
+    }
+    &_wr {
+      flex-wrap: wrap-reverse;
+    }
+  }
+}
+
+// 列
+.column {
+  display: flex;
+  flex-direction: column;
+  &-v {
+    each(.arrangement(), {
+      &_@{key} {
+        display: flex;
+        flex-direction: column;
+        align-items: @value;
+      }
+    });
+  }
+  &-h {
+    each(.arrangement(), {
+      &_@{key} {
+        display: flex;
+        flex-direction: column;
+        justify-content: @value;
+      }
+    });
+  }
+  each(.arrangement(), .(@avalue, @akey) {
+    &_@{akey} {
+      each(.arrangement(), .(@jvalue, @jkey) {
+        &_@{jkey} {
+          display: flex;
+          flex-direction: column;
+          align-items: @avalue;
+          justify-content: @jvalue;
+        }
+      })
+    };
+  });
+  // 换行
+  &-wp {
+    &_w {
+      flex-wrap: wrap;
+    }
+    &_wr {
+      flex-wrap: wrap-reverse;
+    }
+  }
+}
