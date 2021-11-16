@@ -4,10 +4,10 @@
   "description": "原子类的css库",
   "main": "index.js",
   "scripts": {
-    "dev": "npx node-sass ./metas/index.scss -w metas -o dev",
-    "build": "npx node-sass ./metas/index.scss --output-style compressed -o ./test",
-    "comp": "npx node-sass ./metas/modules/aboutUnit/font.scss -o ./test",
-    "comp:less": "npx lessc --clean-css=advanced ./metas/index.less ./test/test.css"
+    "build:scss": "npx node-sass ./metas/index.scss --output-style compressed -o ./test",
+    "build:less": "npx node-sass ./metas/index.scss --output-style compressed -o ./test",
+    "test:scss": "npx node-sass ./metas/modules/aboutUnit/font.scss -o ./test",
+    "test:less": "npx lessc --clean-css=advanced ./metas/index.less ./test/test.css"
   },
   "keywords": [
     "meta",
@@ -26,9 +26,7 @@
     "url": "https://github.com/care526/metacss/issues"
   },
   "devDependencies": {
-    "node-sass": "^4.14.1"
-  },
-  "dependencies": {
+    "node-sass": "^4.14.1",
     "less": "^4.1.2",
     "less-plugin-clean-css": "^1.5.1"
   }
